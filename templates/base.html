@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b56">
+  <title>{% block title %}ExamSphere{% endblock %} | ExamSphere</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">E</span><span>exam<span class="brand-light">sphere</span><small>EXAMINATION MANAGEMENT</small></span></a>
+  {% if current_user %}
+  <nav class="nav-links">
+    {% if current_role == 'admin' %}
+      <a href="{{ url_for('admin_dashboard') }}">Overview</a><a href="{{ url_for('admin_exams') }}">Exams</a><a href="{{ url_for('admin_questions') }}">Question bank</a><a href="{{ url_for('admin_results') }}">Results</a><a href="{{ url_for('admin_users') }}">Students</a>
+    {% else %}<a href="{{ url_for('student_dashboard') }}">My dashboard</a>{% endif %}
+  </nav>
+  <div class="profile-area"><span class="avatar">{{ current_user[0]|upper }}</span><span class="profile-name">{{ current_user }}</span><a class="logout-link" href="{{ url_for('logout') }}">Sign out</a></div>
+  {% else %}<div class="nav-actions"><a class="nav-login" href="{{ url_for('login') }}">Sign in</a><a class="btn btn-primary btn-small" href="{{ url_for('register') }}">Create account</a></div>{% endif %}
+</header>
+<main class="page-shell">
+  {% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="flash-stack">{% for category,message in messages %}<div class="flash flash-{{ category }}">{{ message }}<button type="button" aria-label="Dismiss" onclick="this.parentElement.remove()">×</button></div>{% endfor %}</div>{% endif %}{% endwith %}
+  {% block content %}{% endblock %}
+</main>
+<footer class="footer"><span>© 2026 ExamSphere</span><span>Secure assessment. Clear insights. Better outcomes.</span></footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body></html>
