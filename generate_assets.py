@@ -154,8 +154,7 @@ imgs={
  'architecture.png': architecture(),
  'database_model.png': database_diagram(),
 }
-for name,img in imgs.items(): img.save(ASSETS/name,optimize=True)
-# Copy lightweight assets to preview directory for convenient viewing.
-for name in ['screen_admin.png','screen_student.png','screen_exam.png']:
-    imgs[name].save(ROOT/'preview'/name,optimize=True)
+# Interface screenshots (docs/assets/screen_*.png) are real captures of the running app; only diagrams are generated here.
+for name,img in imgs.items():
+    if not name.startswith('screen_'): img.save(ASSETS/name,optimize=True)
 print('Assets written:', ', '.join(imgs))

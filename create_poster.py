@@ -97,21 +97,22 @@ section(d,45,1865,930,260,'9','Team details',BLUE)
 # Table header
 rounded(d,(75,1932,935,1976),8,(239,245,251),LINE,1)
 drawtext(d,(95,1954),'NAME',13,NAVY,True,'lm');drawtext(d,(420,1954),'REGISTRATION NUMBER',13,NAVY,True,'lm');drawtext(d,(760,1954),'ROLE',13,NAVY,True,'lm')
-for i,(name,reg) in enumerate([('Shubham','251302294'),('Bharat','251302272'),('Yash','2513022263')]):
+for i,(name,reg) in enumerate([('Shubham','251302294'),('Bharat','251302272'),('Yash','251302263')]):
  y=1995+i*39
  drawtext(d,(95,y),name,15,INK,True,'lm');drawtext(d,(420,y),reg,15,INK,False,'lm');drawtext(d,(760,y),'Team member',14,MUTED,False,'lm')
  d.line((75,y+19,935,y+19),fill=LINE,width=1)
 section(d,1000,1865,455,260,'10','Next steps',AMBER)
 y=1937
-for b in ['Run final browser acceptance tests.','Publish the code to the team GitHub repo.','Add the repository URL to team details.','Deploy a public website only after security review.']:
+for b in ['Add more question types to the bank.','Keep the GitHub repo updated with fixes.','Run a wider browser test on more devices.','Deploy a public website only after security review.']:
  y=bullet(d,1025,y,b,400,14,INK,AMBER,4)
 # Footer block
 rounded(d,(45,2150,1455,2350),22,NAVY)
 drawtext(d,(80,2190),'SECURE ASSESSMENT. CLEAR INSIGHTS. BETTER OUTCOMES.',23,WHITE,True)
 drawtext(d,(80,2243),'Submitted to: Mr. Vivek  •  Trainer, ByteXL',17,(193,216,241),True)
 drawtext(d,(80,2288),'Team: ExamSphere',15,(193,216,241))
-drawtext(d,(1420,2245),'GITHUB',13,(137,189,246),True,'ra')
-drawtext(d,(1420,2280),'MANDATORY LINK',12,(193,216,241),True,'ra')
+drawtext(d,(1420,2236),'SOURCE CODE ON GITHUB',13,(137,189,246),True,'ra')
+drawtext(d,(1420,2262),'Vitaintelligence / Online-Examination-',11,(193,216,241),True,'ra')
+drawtext(d,(1420,2282),'Data-Management-System',11,(193,216,241),True,'ra')
 drawtext(d,(750,2375),'ExamSphere  |  SGT University  |  October 2026',13,MUTED,False,'mm')
 im.save(OUT,dpi=(200,200),optimize=True)
 print(OUT)

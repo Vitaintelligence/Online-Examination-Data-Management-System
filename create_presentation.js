@@ -38,7 +38,7 @@ function addImageFit(slide,file,x,y,w,h) { slide.addImage({path:file,x,y,w,h,siz
  rect(s,8.0,0.55,4.65,3.0,C.white);
  addImageFit(s,img('screen_admin.png'),8.12,0.70,4.4,2.67);
  txt(s,'PROJECT TEAM',0.75,3.65,2.5,0.22,{fontSize:8,bold:true,color:C.blue,charSpacing:1.4});
- const members=[['Shubham','251302294'],['Bharat','251302272'],['Yash','2513022263']];
+ const members=[['Shubham','251302294'],['Bharat','251302272'],['Yash','251302263']];
  members.forEach((m,i)=>{ const x=0.75+i*2.35; rect(s,x,3.98,2.13,0.82,C.white); txt(s,m[0],x+0.15,4.10,1.83,0.22,{fontSize:13,bold:true,color:C.navy}); txt(s,m[1],x+0.15,4.42,1.83,0.18,{fontSize:9,color:C.muted}); });
  txt(s,'Submitted to: Mr. Vivek  |  Trainer, ByteXL',0.75,5.10,6.5,0.26,{fontSize:10,color:C.ink,bold:true});
  rect(s,0.75,5.68,11.85,0.75,C.navy); txt(s,'BUILT WITH PYTHON + FLASK + SQLITE',1.05,5.88,5.7,0.25,{fontSize:12,bold:true,color:C.white}); txt(s,'TA-1 / TA-2 PROJECT SUBMISSION',8.0,5.89,4.2,0.22,{fontSize:9,bold:true,color:'B7D4F5',align:'right'});
@@ -105,9 +105,9 @@ function addImageFit(slide,file,x,y,w,h) { slide.addImage({path:file,x,y,w,h,siz
  const s=pptx.addSlide('MASTER'); title(s,'09 / Wrap-up','A connected foundation for digital assessments','ExamSphere connects examination creation, student attempts and performance data in one browser-based application.');
  rect(s,0.68,1.88,5.55,3.95,C.navy); txt(s,'PROJECT OUTCOME',0.98,2.2,3.5,0.22,{fontSize:8,bold:true,color:'8AB8F4',charSpacing:1.3}); txt(s,'Create.\nAssess.\nUnderstand.',0.98,2.72,4.7,1.65,{fontSize:31,bold:true,color:C.white,fontFace:'Aptos Display',valign:'top'}); txt(s,'A functional academic prototype with persistent assessment data and automatic MCQ evaluation.',0.98,4.85,4.65,0.55,{fontSize:10,color:'C8D9EF',valign:'top'});
  rect(s,6.55,1.88,6.05,3.95,C.white); txt(s,'PROJECT TEAM',6.88,2.2,2.8,0.22,{fontSize:8,bold:true,color:C.blue,charSpacing:1.3});
- const ms=[['Shubham','251302294'],['Bharat','251302272'],['Yash','2513022263']]; ms.forEach((m,i)=>{let y=2.75+i*0.75;txt(s,m[0],6.9,y,2.3,0.25,{fontSize:14,bold:true,color:C.navy});txt(s,m[1],9.65,y,2.2,0.25,{fontSize:11,color:C.muted});});
+ const ms=[['Shubham','251302294'],['Bharat','251302272'],['Yash','251302263']]; ms.forEach((m,i)=>{let y=2.75+i*0.75;txt(s,m[0],6.9,y,2.3,0.25,{fontSize:14,bold:true,color:C.navy});txt(s,m[1],9.65,y,2.2,0.25,{fontSize:11,color:C.muted});});
  txt(s,'Submitted to: Mr. Vivek (ByteXL Trainer)',6.9,5.2,4.8,0.24,{fontSize:9,bold:true,color:C.ink});
- rect(s,0.68,6.05,11.92,0.68,'EAF2FF','0.1','DCE8FA'); txt(s,'GitHub repository: To be published by the team before submission (mandatory)',0.9,6.27,7.7,0.2,{fontSize:9,bold:true,color:C.navy}); txt(s,'Website: Not deployed',9.2,6.27,3.1,0.2,{fontSize:9,color:C.muted,align:'right'});
+ rect(s,0.68,6.05,11.92,0.68,'EAF2FF','0.1','DCE8FA'); txt(s,'GitHub: github.com/Vitaintelligence/Online-Examination-Data-Management-System',0.9,6.27,7.7,0.2,{fontSize:9,bold:true,color:C.navy}); txt(s,'Website: Not deployed',9.2,6.27,3.1,0.2,{fontSize:9,color:C.muted,align:'right'});
 }
 
 pptx.writeFile({ fileName: path.join(__dirname,'ExamSphere_Project_Presentation.pptx') });

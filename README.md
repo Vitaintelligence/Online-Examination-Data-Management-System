@@ -1,5 +1,8 @@
 # ExamSphere - Online Examination Data Management System
 
+Team ExamSphere: Shubham (251302294), Bharat (251302272), Yash (251302263).  
+Repository: https://github.com/Vitaintelligence/Online-Examination-Data-Management-System
+
 A role-based web application for managing online examinations, question banks, student attempts and result records.
 
 ## Technology
@@ -60,9 +63,8 @@ A second sample student is `ishita@examsphere.local` with password `Student@1234
 5. Review selected and correct answers in the result page.
 
 
-## Preview and walkthrough
-- `preview/demo.html` is a standalone, clickable UI preview using sample data; it is not connected to the Flask database.
-- `ExamSphere_Project_Demo.mp4` in the submission package is a narrated prototype walkthrough assembled from generated interface captures. It is not a live browser screen recording. Record a fresh live walkthrough after running the application locally if the evaluator specifically requires a real screen recording.
+## Walkthrough
+`ExamSphere_Project_Demo.mp4` in the submission package is a screen recording with voice-over of the real Flask application running locally in a browser (landing page, student registration, admin exam setup, student attempt and result, admin results and CSV export).
 
 ## Data model
 `users`, `exams`, `questions`, `attempts` and `answers` form the core relational schema. Foreign keys protect relationships. Indexes support lookups by exam and student. Passwords are stored as salted hashes, and SQL statements use parameter binding.
@@ -77,12 +79,12 @@ A second sample student is `ishita@examsphere.local` with password `Student@1234
 - The browser timer improves the student experience, but this academic build does not provide a tamper-proof proctoring or server-enforced anti-cheating environment.
 - Demo credentials are intentionally documented for local evaluation. Replace them and configure a strong random `SECRET_KEY` before deployment.
 - The project uses SQLite for straightforward local setup. A production rollout would typically use managed PostgreSQL/MySQL, HTTPS, CSRF middleware, rate limiting, backups and a hardened deployment configuration.
-- No public website or GitHub repository has been configured by this generated package. Publish the source code to your team's GitHub repository and add its URL to the submission text file before submitting.
+- The source code is published at https://github.com/Vitaintelligence/Online-Examination-Data-Management-System. No public website has been deployed.
 
 ## Project structure
 
 ```text
-ExamSphere_Project/
+ExamSphere/
 ├── app.py
 ├── dsa.py
 ├── schema.sql

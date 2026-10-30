@@ -113,7 +113,7 @@ p.add_run().add_picture(str(AS/'screen_admin.png'),width=Inches(4.7))
 p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_before=Pt(12)
 r=p.add_run('PROJECT TEAM'); r.bold=True; r.font.size=Pt(9); r.font.color.rgb=RGBColor.from_string(BLUE)
 add_table(doc,['TEAM MEMBER','REGISTRATION NUMBER'],[
-    ('Shubham','251302294'),('Bharat','251302272'),('Yash','2513022263')],[3.1,3.1],9)
+    ('Shubham','251302294'),('Bharat','251302272'),('Yash','251302263')],[3.1,3.1],9)
 p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_before=Pt(7)
 r=p.add_run('Submitted to: Mr. Vivek  |  Trainer, ByteXL'); r.font.size=Pt(9); r.font.color.rgb=RGBColor.from_string(INK)
 p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER
@@ -268,9 +268,9 @@ for x in [
     'Run python app.py and open the local address printed by Flask. The first startup creates the SQLite database and seeds clearly labelled demonstration accounts and sample data.',
     'Evaluate both roles: use the administrator account to publish an examination, then sign in as a student to attempt it and review the generated result. Demo credentials are documented in README.md.'
 ]: add_bullet(doc,x)
-add_heading(doc,'13.2 GitHub source publication',2)
-add_body(doc,'The mandatory GitHub repository must be created by the team in its own GitHub account. After extracting the code package, initialise Git, stage the project files, create an initial commit and connect the repository URL supplied by GitHub. Push the main branch and verify that the README and source folders are visible to the evaluator. The .gitignore excludes local environment secrets, the generated SQLite database, virtual environments and Python cache files; these exclusions should be retained.')
-add_body(doc,'No public GitHub repository or hosted website has been created as part of this generated package. The team must replace the pending repository field in the team-details text file with the real repository URL before submission. The website field may remain marked as not deployed if no public hosting is available.')
+add_heading(doc,'13.2 Source code publication',2)
+add_body(doc,'The source code is published in the team GitHub repository at https://github.com/Vitaintelligence/Online-Examination-Data-Management-System (main branch). The repository contains the Flask application, the SQLite schema, templates, static assets, tests and the README with local setup instructions. The .gitignore excludes local environment secrets, the generated SQLite database, virtual environments and Python cache files.')
+add_body(doc,'The source is published at the repository URL above. No public website has been deployed; the website field in the team-details file is marked as not deployed.')
 
 # PAGE 8
 add_page_break(doc)
